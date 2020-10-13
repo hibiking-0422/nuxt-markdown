@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "functions": {
+      "source": "functions"
+    }
+  },
+  "hosting": {
+    "public": ".nuxt/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "ssr"
+      }
+    ]
+  }
+}

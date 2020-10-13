@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - 3000:3000
+      - 9005:9005
+    working_dir: "/usr/local/src"
+    volumes:
+      - ".:/usr/local/src"
+      - node_modules_volume:/usr/local/src/first-app/node_modules
+    tty: true
+volumes:
+  node_modules_volume:

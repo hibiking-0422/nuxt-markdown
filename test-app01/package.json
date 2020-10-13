@@ -1,0 +1,25 @@
+{
+  "name": "test-app01",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build && npm run build:copy:ssr",
+    "build:copy:ssr": "rimraf functions/ssr && mkdirp functions/ssr && cp -R .nuxt/dist functions/ssr/dist",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/components": "^1.1.0",
+    "@nuxtjs/markdownit": "^1.2.10",
+    "core-js": "^3.6.5",
+    "firebase": "^7.23.0",
+    "mavon-editor": "^2.9.0",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "webpack": "^5.1.0"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
